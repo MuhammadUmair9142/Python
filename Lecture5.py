@@ -25,11 +25,31 @@
 # sum_numbers(2,33,42,23)
 
 
-def studen_info(**kwargs):
+# def studen_info(**kwargs):
 
     
-    for key,value in kwargs.items():   
-        print(key, ':' ,value)
+#     for key,value in kwargs.items():   
+#         print(key, ':' ,value)
 
 
-studen_info(name='Umair', age=21)
+# studen_info(name='Umair', age=21)
+
+
+student_info = [
+    {
+    'Name':"Umair",
+    'age':22,
+    },
+    {
+    'Name':"Osama",
+    'age':25
+    }
+]
+
+def studentInfo(*args,**kwargs):
+
+    for info in args:
+        for key,value in info:
+            print(key,value)
+
+studentInfo(student_info)
