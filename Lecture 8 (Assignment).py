@@ -28,3 +28,11 @@ for employee in employees_with_bonus:
 
 
 print(bonus_calculated)
+
+
+
+
+#task 2:
+# 1.add bonus for each employee in discountCalculated
+# 2.in output print all pmployee salary individually
+# 3.
