@@ -1,0 +1,12 @@
+2025-01-15 08:15:23 INFO User login successful | user_id=102 | ip=192.168.1.10
+2025-01-15 08:16:02 INFO Page accessed | /dashboard | user_id=102
+2025-01-15 08:17:45 WARNING Failed login attempt | user_id=205 | ip=192.168.1.25
+2025-01-15 08:18:10 INFO User login successful | user_id=205 | ip=192.168.1.25
+2025-01-15 08:20:34 INFO File uploaded | filename=report.pdf | user_id=102
+2025-01-15 08:22:19 ERROR Database connection failed | timeout=30s
+2025-01-15 08:23:05 INFO Retry database connection successful
+2025-01-15 08:25:44 INFO User logout | user_id=102
+2025-01-15 08:30:12 INFO Page accessed | /profile | user_id=205
+2025-01-15 08:32:50 ERROR Unauthorized access attempt | ip=192.168.1.99
+2025-01-15 08:35:14 INFO User logout | user_id=205
+2025-01-15 08:40:01 INFO Server health check passed
