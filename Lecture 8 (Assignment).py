@@ -37,40 +37,40 @@
 # 2.in output print all pmployee salary individually
 # 3.
 
+employees = []
 
+total_employees = int(input("How many employees? "))
 
-employees=[]
+for i in range(total_employees):
+    print(f"\nEmployee {i + 1}")
+    name = input("Enter Name: ")
+    salary = float(input("Enter Salary: "))
+    depart = input("Enter Department: ")
+    bonus = input("Have Bonus? (True/False): ").lower() == "true"
 
-i = 1
-
-while i <= 3:
-    name = input("Enter Your Name: ")
-    salary = input("Enter Your Salary: ")
-    depart = input("Enter Your Department: ")
-    have_bonus = input("Have Bonus? (Yes OR No): ").lower() == "yes"
-    employee = {
+    employees.append({
         "name": name,
-        "salary":salary,
-        "department":depart,
-        "bonus":have_bonus
-    }
+        "salary": salary,
+        "depart": depart,
+        "bonus": bonus
+    })
+employees_with_bonus = list(
+    filter(lambda emp: emp["bonus"] == True, employees)
+)
+bonus_calculated = list(
+    map(lambda emp: emp["salary"] * 0.20, employees_with_bonus)
+)
 
-    employees.append(employee)
-    i += 1
+for employee, bonus in zip(employees_with_bonus, bonus_calculated):
+    print("\nName:", employee["name"])
+    print("Department:", employee["depart"])
+    print("Salary:", employee["salary"])
+    print("Bonus Amount:", bonus)
+total_bonus = sum(bonus_calculated)
+
+print("\nTotal Bonus Paid:", total_bonus)
 
 
-
-
-
-filtered_employees = list(filter(lambda emp:emp["bonus"] == "yes",employees))
-
-for filtered_employee in filtered_employees:
-    
-
-
-    print(filtered_employee)
-print(have_bonus)
-print(employees)
 
 
 
